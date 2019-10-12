@@ -7,23 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		067591A22352227000DA38FB /* ViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067591A12352227000DA38FB /* ViewExt.swift */; };
 		06EE0F9B2350A762003FE355 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EE0F9A2350A762003FE355 /* AppDelegate.swift */; };
 		06EE0F9D2350A762003FE355 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EE0F9C2350A762003FE355 /* SceneDelegate.swift */; };
-		06EE0F9F2350A762003FE355 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EE0F9E2350A762003FE355 /* ViewController.swift */; };
+		06EE0F9F2350A762003FE355 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EE0F9E2350A762003FE355 /* HomeVC.swift */; };
 		06EE0FA22350A762003FE355 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06EE0FA02350A762003FE355 /* Main.storyboard */; };
 		06EE0FA42350A764003FE355 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06EE0FA32350A764003FE355 /* Assets.xcassets */; };
 		06EE0FA72350A764003FE355 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06EE0FA52350A764003FE355 /* LaunchScreen.storyboard */; };
+		3C97E1D05AA461CCB108318B /* Pods_Aqwas_Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C99411DEC1375B9314BE72B /* Pods_Aqwas_Task.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		067591A12352227000DA38FB /* ViewExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExt.swift; sourceTree = "<group>"; };
 		06EE0F972350A762003FE355 /* Aqwas Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aqwas Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06EE0F9A2350A762003FE355 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06EE0F9C2350A762003FE355 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		06EE0F9E2350A762003FE355 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		06EE0F9E2350A762003FE355 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		06EE0FA12350A762003FE355 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		06EE0FA32350A764003FE355 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06EE0FA62350A764003FE355 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06EE0FA82350A764003FE355 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C99411DEC1375B9314BE72B /* Pods_Aqwas_Task.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aqwas_Task.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7A7105A69D25FFA35CC2795 /* Pods-Aqwas Task.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aqwas Task.release.xcconfig"; path = "Target Support Files/Pods-Aqwas Task/Pods-Aqwas Task.release.xcconfig"; sourceTree = "<group>"; };
+		D43582C02311521814E74414 /* Pods-Aqwas Task.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aqwas Task.debug.xcconfig"; path = "Target Support Files/Pods-Aqwas Task/Pods-Aqwas Task.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C97E1D05AA461CCB108318B /* Pods_Aqwas_Task.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +49,8 @@
 			children = (
 				06EE0F992350A762003FE355 /* Aqwas Task */,
 				06EE0F982350A762003FE355 /* Products */,
+				986AD17EFC0185000EE4AFAC /* Pods */,
+				635A9C441417AB8E3EBDCAEF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +65,82 @@
 		06EE0F992350A762003FE355 /* Aqwas Task */ = {
 			isa = PBXGroup;
 			children = (
+				06EE0FB32350A9D3003FE355 /* Extensions */,
+				06EE0FB22350A9CD003FE355 /* Resources */,
+				06EE0FB12350A9C7003FE355 /* Models */,
+				06EE0FB02350A9C0003FE355 /* ViewModels */,
+				06EE0FAF2350A9BB003FE355 /* Views */,
+				06EE0FAE2350A9B1003FE355 /* Controllers */,
 				06EE0F9A2350A762003FE355 /* AppDelegate.swift */,
 				06EE0F9C2350A762003FE355 /* SceneDelegate.swift */,
-				06EE0F9E2350A762003FE355 /* ViewController.swift */,
 				06EE0FA02350A762003FE355 /* Main.storyboard */,
 				06EE0FA32350A764003FE355 /* Assets.xcassets */,
 				06EE0FA52350A764003FE355 /* LaunchScreen.storyboard */,
 				06EE0FA82350A764003FE355 /* Info.plist */,
 			);
 			path = "Aqwas Task";
+			sourceTree = "<group>";
+		};
+		06EE0FAE2350A9B1003FE355 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		06EE0FAF2350A9BB003FE355 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				06EE0F9E2350A762003FE355 /* HomeVC.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		06EE0FB02350A9C0003FE355 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		06EE0FB12350A9C7003FE355 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		06EE0FB22350A9CD003FE355 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		06EE0FB32350A9D3003FE355 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				067591A12352227000DA38FB /* ViewExt.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		635A9C441417AB8E3EBDCAEF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0C99411DEC1375B9314BE72B /* Pods_Aqwas_Task.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		986AD17EFC0185000EE4AFAC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D43582C02311521814E74414 /* Pods-Aqwas Task.debug.xcconfig */,
+				A7A7105A69D25FFA35CC2795 /* Pods-Aqwas Task.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +150,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 06EE0FAB2350A764003FE355 /* Build configuration list for PBXNativeTarget "Aqwas Task" */;
 			buildPhases = (
+				23664FB06242B2CAF50DA96E /* [CP] Check Pods Manifest.lock */,
 				06EE0F932350A762003FE355 /* Sources */,
 				06EE0F942350A762003FE355 /* Frameworks */,
 				06EE0F952350A762003FE355 /* Resources */,
+				5708E6429E4C4F2EF0040003 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,12 +211,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		23664FB06242B2CAF50DA96E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Aqwas Task-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5708E6429E4C4F2EF0040003 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Aqwas Task/Pods-Aqwas Task-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Aqwas Task/Pods-Aqwas Task-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Aqwas Task/Pods-Aqwas Task-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		06EE0F932350A762003FE355 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06EE0F9F2350A762003FE355 /* ViewController.swift in Sources */,
+				067591A22352227000DA38FB /* ViewExt.swift in Sources */,
+				06EE0F9F2350A762003FE355 /* HomeVC.swift in Sources */,
 				06EE0F9B2350A762003FE355 /* AppDelegate.swift in Sources */,
 				06EE0F9D2350A762003FE355 /* SceneDelegate.swift in Sources */,
 			);
@@ -282,6 +403,7 @@
 		};
 		06EE0FAC2350A764003FE355 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D43582C02311521814E74414 /* Pods-Aqwas Task.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +422,7 @@
 		};
 		06EE0FAD2350A764003FE355 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7A7105A69D25FFA35CC2795 /* Pods-Aqwas Task.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
