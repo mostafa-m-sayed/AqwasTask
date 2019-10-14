@@ -82,4 +82,9 @@ extension UIView {
         }
         return snapshot
     }
+    func setHeight(height: CGFloat) {
+              var frame: CGRect = self.frame
+              frame.size.height = height
+              self.frame = frame
+          }
 }

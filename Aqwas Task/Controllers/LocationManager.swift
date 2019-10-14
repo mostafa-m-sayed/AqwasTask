@@ -1,10 +1,3 @@
-//
-//  LocationManager.swift
-//  Reach_Network
-//
-//  Created by mac on 2/19/19.
-//  Copyright © 2019 Reach. All rights reserved.
-//
 
 import MapKit
 import UIKit

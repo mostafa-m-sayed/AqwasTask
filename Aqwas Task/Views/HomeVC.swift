@@ -10,7 +10,7 @@ import UIKit
 import NVActivityIndicatorView
 import MapKit
 class HomeVC: UIViewController {
-
+    
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var btnSettings: UIButton!
     @IBOutlet weak var btnSearch: UIButton!
@@ -18,20 +18,21 @@ class HomeVC: UIViewController {
     @IBOutlet weak var lblTitle: UILabel!
     
     @IBOutlet weak var btnMenu: UIButton!
+    @IBOutlet weak var vwTop: UIView!
     
-    @IBOutlet weak var vwOptions: UIView!
+    @IBOutlet weak var vwOptions: OptionsView!
     //MARK: Logo Constraints
     @IBOutlet weak var constCenterVerticalImgLogoToContainer: NSLayoutConstraint!
-
+    
     //MARK: Title Constraints
     @IBOutlet weak var constTopLblTitleToLogo: NSLayoutConstraint!
     @IBOutlet weak var constBottomLblTitleToContainer: NSLayoutConstraint!
-
+    
     //MARK: Settings Button Constraints
     @IBOutlet weak var constLeadingBtnSettingsToContainer: NSLayoutConstraint!
     @IBOutlet weak var constLeadingBtnSettingsToLblTitle: NSLayoutConstraint!
     @IBOutlet weak var constBottomBtnSettingsToContainer: NSLayoutConstraint!
-
+    
     //MARK: Search Button Constraints
     @IBOutlet weak var constTopBtnSearchToLblTitle: NSLayoutConstraint!
     @IBOutlet weak var constTrailingBtnSearchToLblTitle: NSLayoutConstraint!
@@ -78,6 +79,79 @@ class HomeVC: UIViewController {
     @IBOutlet weak var constTopVwLoaderToLblTitle: NSLayoutConstraint!
     @IBOutlet weak var constTrailingVwLoaderToLblTitle: NSLayoutConstraint!
     
+    @IBOutlet weak var constHeightVwTop: NSLayoutConstraint!
+    
+    var menuView: SideMenuView!
+    var menuExpanded : Bool =  false
+    let location = LocationManager()
+    var resturant: ResturantVM?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        initializeLoader()
+        location.delegate = self
+        location.startLocationTracking(initializing: true)
+    }
+    
+    override func viewWillAppear(_ animate: Bool) {
+        super.viewWillAppear(animate)
+        btnSettings.imageView?.contentMode = .scaleAspectFit
+        btnMenu.imageView?.contentMode = .scaleAspectFit
+        startAnimation()
+        intializeSideMenuNibView()
+    }
+    
+    func intializeSideMenuNibView(){
+        self.menuView = (Bundle.main.loadNibNamed("SideMenuView", owner: self, options: nil)![0] as! SideMenuView)
+    }
+    
+    //MARK: Animation Handling
+    
+    func startAnimation() {
+        animateLogo()
+        animateTitle()
+        animateBtnSearch()
+        animateBtnSettings()
+        UIView.animate(withDuration: 1.5) { [weak self] in
+            self?.view.layoutIfNeeded() ?? ()
+        }
+    }
+    
+    func animateBtnSettings() {
+        constLeadingBtnSettingsToContainer.minPriority()
+        constLeadingBtnSettingsToLblTitle.maxPriority()
+        constBottomBtnSettingsToContainer.minPriority()
+    }
+    
+    func animateBtnSearch() {
+        constTopBtnSearchToLblTitle.maxPriority()
+        constTrailingBtnSearchToLblTitle.maxPriority()
+        constBottomBtnSearchToContainer.minPriority()
+        constTrailingBtnSearchToContainer.minPriority()
+    }
+    
+    func animateLogo() {
+        constCenterVerticalImgLogoToContainer.constant = -20
+    }
+    
+    func animateTitle() {
+        constTopLblTitleToLogo.maxPriority()
+        constBottomLblTitleToContainer.minPriority()
+    }
+    
+    func animateLoader() {
+        vwLoader.isHidden = false
+        btnSearch.isHidden = true
+        btnSettings.isHidden = true
+        constCenterVerticalImgLogoToContainer.constant = -40
+        constWidthVwLoader.minPriority()
+        constLeadingVwLoaderToBtnSettings.maxPriority()
+        UIView.animate(withDuration: 0.5) { [weak self] in
+            self?.view.layoutIfNeeded() ?? ()
+        }
+        vwLoader.startAnimating()
+    }
+    
     func animateToTop() {
         constCenterHorizotalImgLogoToContainer.minPriority()
         constCenterHorizotalLblTitleToContainer.minPriority()
@@ -94,13 +168,14 @@ class HomeVC: UIViewController {
         constCenterHorizontalLblTitleToContainerTop.maxPriority()
         constHeightImgLogoTop.maxPriority()
         constWidthImgLogoTop.maxPriority()
-//        constWidthLblTitleTop.maxPriority()
-//        constHeightLblTitleTop.maxPriority()
+        //        constWidthLblTitleTop.maxPriority()
+        //        constHeightLblTitleTop.maxPriority()
         constTopVwTopToContainer.constant = 0
         self.view.backgroundColor = UIColor.white
         mapView.alpha = 1
         vwOptions.isHidden = false
     }
+    
     func animateToBottom() {
         btnSearch.isHidden = false
         btnSettings.isHidden = false
@@ -118,7 +193,7 @@ class HomeVC: UIViewController {
         constWidthBtnSettingsToVwHiddenBot.maxPriority()
         constCenterVerticalBtnSearchToVwHidden.maxPriority()
         
-              
+        
         constLeadingVwLoaderToVwHidden.maxPriority()
         constTrailingVwLoaderToVwHidden.maxPriority()
         constTopVwLoaderToVwHidden.maxPriority()
@@ -132,14 +207,16 @@ class HomeVC: UIViewController {
         changeButtonsColors()
         
     }
+    
     func changeButtonsColors() {
         btnSettings.backgroundColor =  UIColor(hexString: "#468C96")
         btnSearch.backgroundColor =  UIColor(hexString: "#468C96")
-
+        
         btnSettings.setTitleColor(UIColor.white, for: .normal)
         btnSearch.setTitleColor(UIColor.white, for: .normal)
         btnSettings.tintColor = UIColor.white
     }
+    
     func animateAfterSearch() {
         animateToTop()
         animateToBottom()
@@ -148,96 +225,87 @@ class HomeVC: UIViewController {
         }
     }
     
-    let location = LocationManager()
-    var resturant: ResturantVM?
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        initializeLoader()
-        location.delegate = self
-        location.startLocationTracking(initializing: true)
-    }
-
-    override func viewWillAppear(_ animate: Bool) {
-        super.viewWillAppear(animate)
-        btnSettings.imageView?.contentMode = .scaleAspectFit
-        btnMenu.imageView?.contentMode = .scaleAspectFit
-        startAnimation()
-    }
-
-    //MARK: Animation Handling
-    
-    func startAnimation() {
-        animateLogo()
-        animateTitle()
-        animateBtnSearch()
-        animateBtnSettings()
-        UIView.animate(withDuration: 1.5) { [weak self] in
-            self?.view.layoutIfNeeded() ?? ()
-        }
-    }
-
-    func animateBtnSettings() {
-        constLeadingBtnSettingsToContainer.minPriority()
-        constLeadingBtnSettingsToLblTitle.maxPriority()
-        constBottomBtnSettingsToContainer.minPriority()
-    }
-
-    func animateBtnSearch() {
-        constTopBtnSearchToLblTitle.maxPriority()
-        constTrailingBtnSearchToLblTitle.maxPriority()
-        constBottomBtnSearchToContainer.minPriority()
-        constTrailingBtnSearchToContainer.minPriority()
-    }
-
-    func animateLogo() {
-        constCenterVerticalImgLogoToContainer.constant = -20
-    }
-
-    func animateTitle() {
-        constTopLblTitleToLogo.maxPriority()
-        constBottomLblTitleToContainer.minPriority()
-    }
-
-    func animateLoader() {
-        vwLoader.isHidden = false
-        btnSearch.isHidden = true
-        btnSettings.isHidden = true
-        constCenterVerticalImgLogoToContainer.constant = -40
-        constWidthVwLoader.minPriority()
-        constLeadingVwLoaderToBtnSettings.maxPriority()
-        UIView.animate(withDuration: 0.5) { [weak self] in
-            self?.view.layoutIfNeeded() ?? ()
-        }
-        vwLoader.startAnimating()
-    }
-
     func initializeLoader() {
         vwLoader.type = .ballPulse
         vwLoader.backgroundColor = UIColor.white
         vwLoader.color = UIColor(hexString: "#33536A")
     }
-
+    
     @IBAction func btnSearch_Click(_ sender: UIButton) {
         location.startLocationTracking(initializing: false)
         animateLoader()
     }
-
+    
     func getResturant() {
-        self.animateAfterSearch()
-//        guard let lat = LocationManager.currentLocation?.coordinate.latitude, let long = LocationManager.currentLocation?.coordinate.longitude else { return }
-//        ResturantVM.get(lat: lat, long: long) { resturant, error in
-//            self.vwLoader.stopAnimating()
-//            if error != nil {
-//                self.alert(message: error!, title: "Failed", buttonMessage: "OK")
-//                return
-//            }
-//            guard let resturant = resturant else { return }
-//            print(resturant)
-//            self.animateToTop()
-//        }
+        guard let lat = LocationManager.currentLocation?.coordinate.latitude, let long = LocationManager.currentLocation?.coordinate.longitude else { return }
+        ResturantVM.get(lat: lat, long: long) { resturant, error in
+            self.vwLoader.stopAnimating()
+            if error != nil {
+                self.alert(message: error!, title: "Failed", buttonMessage: "OK")
+                return
+            }
+            guard let resturant = resturant else { return }
+            self.resturant = resturant
+            self.vwOptions.bindData(resturant: resturant)
+            self.bindMapData()
+            print(resturant)
+            self.animateAfterSearch()
+        }
     }
 
+    func bindMapData() {
+        guard let resturant = resturant else { return }
+        let center = CLLocationCoordinate2D(latitude: resturant.lat, longitude: resturant.long)
+        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+        //mapView.delegate = self
+        mapView.setRegion(region, animated: true)
+        let myAnnotation: MKPointAnnotation = MKPointAnnotation()
+        myAnnotation.coordinate = center
+        mapView.addAnnotation(myAnnotation)
+//            UIView.animate(withDuration: 1.0) { [weak self] in
+//                self!.view.layoutIfNeeded()
+//            }
+    }
+
+    @IBAction func btnMenu_Click(_ sender: UIButton) {
+        toggleSideMenu()
+    }
+    
+    func toggleSideMenu() {
+        transformSideMenuBtn()
+        if menuExpanded {
+            self.menuExpanded = false
+            hideShowBtnsAndView(show: false)
+            self.menuView.removeFromSuperview()
+            constHeightVwTop.constant = 85
+            
+        } else {
+            self.menuExpanded = true
+            hideShowBtnsAndView(show: true)
+            constHeightVwTop.constant = view.frame.height
+            menuView.center = self.vwTop.center
+            self.vwTop.addSubview(menuView)
+        }
+        UIView.animate(withDuration: 0.5) { [weak self] in
+            self?.view.layoutIfNeeded() ?? ()
+        }
+    }
+    func hideShowBtnsAndView(show: Bool) {
+        btnSearch.isHidden = show
+        btnSettings.isHidden = show
+        vwOptions.isHidden = show
+    }
+    func transformSideMenuBtn() {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.btnMenu.transform = self.btnMenu.transform.rotated(by: CGFloat(Double.pi))
+            if self.btnMenu.imageView?.image == UIImage(named: "close") {
+                self.btnMenu.setImage(UIImage(named: "menu"), for: .normal)
+            }
+            else {
+                self.btnMenu.setImage(UIImage(named: "close"), for: .normal)
+            }
+        })
+    }
 }
 
 extension HomeVC: LocationUpdated {
@@ -257,11 +325,4 @@ extension HomeVC {
         self.mapView.setRegion(region, animated: true)
     }
 }
-extension NSLayoutConstraint {
-    func minPriority() {
-        self.priority = UILayoutPriority(rawValue: 1)
-    }
-    func maxPriority() {
-        self.priority = UILayoutPriority(rawValue: 1000)
-    }
-}
+

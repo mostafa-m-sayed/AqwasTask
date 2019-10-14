@@ -11,6 +11,9 @@ struct Resturant: Codable {
     var id: String?
     var name: String?
     var rating: String?
-    var Ulat: String?
-    var Ulon: String?
+    var lat: String?
+    var lon: String?
+    var cat: String?
+    var link: String?
+    var image: [String]?
 }

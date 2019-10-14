@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		061F3ED82354E57900EF6115 /* OptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061F3ED72354E57900EF6115 /* OptionsView.swift */; };
+		061F3EDA23550A6000EF6115 /* ApplicationExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061F3ED923550A6000EF6115 /* ApplicationExt.swift */; };
+		061F3EDC235512EA00EF6115 /* ImagePreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061F3EDB235512EA00EF6115 /* ImagePreviewVC.swift */; };
+		064790BF23535BE0005078B4 /* ConstraintExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064790BE23535BE0005078B4 /* ConstraintExt.swift */; };
+		064790C223535EFC005078B4 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064790C023535EFC005078B4 /* SideMenuView.swift */; };
+		064790C323535EFC005078B4 /* SideMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 064790C123535EFC005078B4 /* SideMenuView.xib */; };
 		067591A22352227000DA38FB /* ViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067591A12352227000DA38FB /* ViewExt.swift */; };
 		067591A423523D9100DA38FB /* ColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067591A323523D9100DA38FB /* ColorExt.swift */; };
 		067591A62352413700DA38FB /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067591A52352413700DA38FB /* LocationManager.swift */; };
@@ -17,7 +23,6 @@
 		067591B12352597600DA38FB /* ResturantVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067591B02352597600DA38FB /* ResturantVM.swift */; };
 		067591B32352598300DA38FB /* Resturant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067591B22352598300DA38FB /* Resturant.swift */; };
 		067591B523526B7700DA38FB /* AlertMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067591B423526B7700DA38FB /* AlertMessage.swift */; };
-		067591B72352749D00DA38FB /* ResturantDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067591B62352749D00DA38FB /* ResturantDetailsVC.swift */; };
 		06EE0F9B2350A762003FE355 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EE0F9A2350A762003FE355 /* AppDelegate.swift */; };
 		06EE0F9D2350A762003FE355 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EE0F9C2350A762003FE355 /* SceneDelegate.swift */; };
 		06EE0F9F2350A762003FE355 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06EE0F9E2350A762003FE355 /* HomeVC.swift */; };
@@ -28,6 +33,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		061F3ED72354E57900EF6115 /* OptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsView.swift; sourceTree = "<group>"; };
+		061F3ED923550A6000EF6115 /* ApplicationExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationExt.swift; sourceTree = "<group>"; };
+		061F3EDB235512EA00EF6115 /* ImagePreviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePreviewVC.swift; sourceTree = "<group>"; };
+		064790BE23535BE0005078B4 /* ConstraintExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintExt.swift; sourceTree = "<group>"; };
+		064790C023535EFC005078B4 /* SideMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
+		064790C123535EFC005078B4 /* SideMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SideMenuView.xib; sourceTree = "<group>"; };
 		067591A12352227000DA38FB /* ViewExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExt.swift; sourceTree = "<group>"; };
 		067591A323523D9100DA38FB /* ColorExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExt.swift; sourceTree = "<group>"; };
 		067591A52352413700DA38FB /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -38,7 +49,6 @@
 		067591B02352597600DA38FB /* ResturantVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantVM.swift; sourceTree = "<group>"; };
 		067591B22352598300DA38FB /* Resturant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resturant.swift; sourceTree = "<group>"; };
 		067591B423526B7700DA38FB /* AlertMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertMessage.swift; sourceTree = "<group>"; };
-		067591B62352749D00DA38FB /* ResturantDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResturantDetailsVC.swift; sourceTree = "<group>"; };
 		06EE0F972350A762003FE355 /* Aqwas Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aqwas Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06EE0F9A2350A762003FE355 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06EE0F9C2350A762003FE355 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +74,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		061F3ED62354E53D00EF6115 /* Side Menu */ = {
+			isa = PBXGroup;
+			children = (
+				064790C023535EFC005078B4 /* SideMenuView.swift */,
+				064790C123535EFC005078B4 /* SideMenuView.xib */,
+			);
+			path = "Side Menu";
+			sourceTree = "<group>";
+		};
 		067591A923524D2B00DA38FB /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,8 +142,10 @@
 		06EE0FAF2350A9BB003FE355 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				061F3ED62354E53D00EF6115 /* Side Menu */,
 				06EE0F9E2350A762003FE355 /* HomeVC.swift */,
-				067591B62352749D00DA38FB /* ResturantDetailsVC.swift */,
+				061F3ED72354E57900EF6115 /* OptionsView.swift */,
+				061F3EDB235512EA00EF6115 /* ImagePreviewVC.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -159,6 +180,8 @@
 				067591A323523D9100DA38FB /* ColorExt.swift */,
 				067591AE23524F7700DA38FB /* CodableExt.swift */,
 				067591B423526B7700DA38FB /* AlertMessage.swift */,
+				064790BE23535BE0005078B4 /* ConstraintExt.swift */,
+				061F3ED923550A6000EF6115 /* ApplicationExt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -242,6 +265,7 @@
 			files = (
 				06EE0FA72350A764003FE355 /* LaunchScreen.storyboard in Resources */,
 				06EE0FA42350A764003FE355 /* Assets.xcassets in Resources */,
+				064790C323535EFC005078B4 /* SideMenuView.xib in Resources */,
 				06EE0FA22350A762003FE355 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,16 +321,20 @@
 			files = (
 				067591A22352227000DA38FB /* ViewExt.swift in Sources */,
 				067591A423523D9100DA38FB /* ColorExt.swift in Sources */,
-				067591B72352749D00DA38FB /* ResturantDetailsVC.swift in Sources */,
+				064790C223535EFC005078B4 /* SideMenuView.swift in Sources */,
 				067591B32352598300DA38FB /* Resturant.swift in Sources */,
 				067591A62352413700DA38FB /* LocationManager.swift in Sources */,
 				067591AB23524D4200DA38FB /* URLs.swift in Sources */,
 				067591AF23524F7700DA38FB /* CodableExt.swift in Sources */,
+				061F3EDA23550A6000EF6115 /* ApplicationExt.swift in Sources */,
 				067591A823524CE900DA38FB /* NetworkManager.swift in Sources */,
+				061F3EDC235512EA00EF6115 /* ImagePreviewVC.swift in Sources */,
 				06EE0F9F2350A762003FE355 /* HomeVC.swift in Sources */,
 				06EE0F9B2350A762003FE355 /* AppDelegate.swift in Sources */,
 				067591B12352597600DA38FB /* ResturantVM.swift in Sources */,
 				06EE0F9D2350A762003FE355 /* SceneDelegate.swift in Sources */,
+				064790BF23535BE0005078B4 /* ConstraintExt.swift in Sources */,
+				061F3ED82354E57900EF6115 /* OptionsView.swift in Sources */,
 				067591AD23524F2C00DA38FB /* APIResponse.swift in Sources */,
 				067591B523526B7700DA38FB /* AlertMessage.swift in Sources */,
 			);

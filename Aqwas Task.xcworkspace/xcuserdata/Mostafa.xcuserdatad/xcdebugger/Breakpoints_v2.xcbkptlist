@@ -7,32 +7,48 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "11739B9C-3A22-4C6D-8636-6B8F4DEA8FDD"
-            shouldBeEnabled = "No"
+            uuid = "9A4662BF-AEA8-422E-A4C5-B8509556D90B"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Aqwas Task/Controllers/Network/NetworkManager.swift"
+            filePath = "Aqwas Task/Views/OptionsView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "makeRequest(configuration:completion:)"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "btnGallery_Click(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F499713A-B8B5-4DD7-B4DE-69A10EF5A8F6"
+            uuid = "3080E414-E089-43D4-B765-4CB8EC55BAB7"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Aqwas Task/Views/HomeVC.swift"
+            filePath = "Aqwas Task/Views/OptionsView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "231"
-            endingLineNumber = "231"
-            landmarkName = "getResturant()"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "downloadImage(url:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "93ADB5EA-BEF5-44A0-81A5-48E3287794DC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Aqwas Task/Views/OptionsView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "downloadImage(url:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
