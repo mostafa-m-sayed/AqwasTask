@@ -9,6 +9,7 @@
 import UIKit
 import NVActivityIndicatorView
 import MapKit
+import NotificationBannerSwift
 class HomeVC: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
@@ -233,6 +234,7 @@ class HomeVC: UIViewController {
     
     @IBAction func btnSearch_Click(_ sender: UIButton) {
         location.startLocationTracking(initializing: false)
+        vwOptions.btnLike.tintColor = UIColor(hexString: "#797779") 
         animateLoader()
     }
     
@@ -254,7 +256,11 @@ class HomeVC: UIViewController {
     }
 
     func bindMapData() {
+        for annotation in self.mapView.annotations {
+            self.mapView.removeAnnotation(annotation)
+        }
         guard let resturant = resturant else { return }
+        
         let center = CLLocationCoordinate2D(latitude: resturant.lat, longitude: resturant.long)
         let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
         //mapView.delegate = self
@@ -325,4 +331,3 @@ extension HomeVC {
         self.mapView.setRegion(region, animated: true)
     }
 }
-

@@ -13,6 +13,8 @@ class OptionsView: UIView {
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblCategory: UILabel!
     @IBOutlet weak var lblRating: UILabel!
+    @IBOutlet weak var btnLike: UIButton!
+    
     var resturant: ResturantVM?
 
     @IBAction func btnMap_Click(_ sender: UIButton) {
@@ -49,7 +51,8 @@ class OptionsView: UIView {
         }
     }
     @IBAction func btnLike_Click(_ sender: UIButton) {
-        UIApplication.topViewController()!.alert(message: "You liked this resturant!")
+        btnLike.tintColor = UIColor.red
+
     }
     @IBAction func btnGallery_Click(_ sender: UIButton) {
         downloadImage(url: resturant?.image ?? "") { img in
@@ -60,6 +63,7 @@ class OptionsView: UIView {
         }
     }
     @IBAction func btnDetails_Click(_ sender: UIButton) {
+        UIApplication.topViewController()!.alert(message: "\(resturant?.name ?? "") is a \(resturant?.category ?? "") resturant with \(resturant?.rating ?? "0")/ rating")
     }
     
     func bindData(resturant: ResturantVM) {

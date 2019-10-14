@@ -8,5 +8,4 @@ target 'Aqwas Task' do
      pod 'NVActivityIndicatorView/AppExtension'
      pod 'Alamofire'
      pod 'Kingfisher'
-
 end

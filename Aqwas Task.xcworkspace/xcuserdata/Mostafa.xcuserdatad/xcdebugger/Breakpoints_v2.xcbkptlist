@@ -7,22 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9A4662BF-AEA8-422E-A4C5-B8509556D90B"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Aqwas Task/Views/OptionsView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
-            landmarkName = "btnGallery_Click(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "3080E414-E089-43D4-B765-4CB8EC55BAB7"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -30,8 +14,8 @@
             filePath = "Aqwas Task/Views/OptionsView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
             landmarkName = "downloadImage(url:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -46,10 +30,58 @@
             filePath = "Aqwas Task/Views/OptionsView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
             landmarkName = "downloadImage(url:completion:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "93ADB5EA-BEF5-44A0-81A5-48E3287794DC - e9abace963cfdc66"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Kingfisher.RetrieveImageResult, Kingfisher.KingfisherError&gt;) -&gt; () in Aqwas_Task.OptionsView.downloadImage(url: Swift.String, completion: (__C.UIImage) -&gt; ()) -&gt; ()"
+                  moduleName = "Aqwas Task"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Work/Aqwas/Aqwas%20Task/Aqwas%20Task/Views/OptionsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "224">
+               </Location>
+               <Location
+                  uuid = "93ADB5EA-BEF5-44A0-81A5-48E3287794DC - e9abace963cfdc66"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Kingfisher.RetrieveImageResult, Kingfisher.KingfisherError&gt;) -&gt; () in Aqwas_Task.OptionsView.downloadImage(url: Swift.String, completion: (__C.UIImage) -&gt; ()) -&gt; ()"
+                  moduleName = "Aqwas Task"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Volumes/Work/Aqwas/Aqwas%20Task/Aqwas%20Task/Views/OptionsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "248">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7FC246D7-5078-40C3-85AD-5C0FDD8EE096"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Aqwas Task/Views/OptionsView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "OptionsView"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
