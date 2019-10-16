@@ -243,7 +243,11 @@ class HomeVC: UIViewController {
         }
         
     }
-    
+
+    @IBAction func btnMenu_Click(_ sender: UIButton) {
+        toggleSideMenu()
+    }
+
     func getResturant() {
         guard let lat = LocationManager.currentLocation?.coordinate.latitude, let long = LocationManager.currentLocation?.coordinate.longitude else { return }
         ResturantVM.get(lat: lat, long: long) { resturant, error in
@@ -279,13 +283,9 @@ class HomeVC: UIViewController {
 //                self!.view.layoutIfNeeded()
 //            }
     }
-
-    @IBAction func btnMenu_Click(_ sender: UIButton) {
-        toggleSideMenu()
-    }
     
     func toggleSideMenu() {
-        transformSideMenuBtn()
+        rransformSideMenuBtn()
         if menuExpanded {
             self.menuExpanded = false
             hideShowBtnsAndView(show: false)
@@ -303,12 +303,14 @@ class HomeVC: UIViewController {
             self?.view.layoutIfNeeded() ?? ()
         }
     }
+    
     func hideShowBtnsAndView(show: Bool) {
         btnSearch.isHidden = show
         btnSettings.isHidden = show
         vwOptions.isHidden = show
     }
-    func transformSideMenuBtn() {
+
+    func rotateSideMenuBtn() {
         UIView.animate(withDuration: 0.5, animations: {
             self.btnMenu.transform = self.btnMenu.transform.rotated(by: CGFloat(Double.pi))
             if self.btnMenu.imageView?.image == UIImage(named: "close") {
