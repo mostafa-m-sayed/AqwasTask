@@ -285,7 +285,7 @@ class HomeVC: UIViewController {
     }
     
     func toggleSideMenu() {
-        rransformSideMenuBtn()
+        rotateSideMenuBtn()
         if menuExpanded {
             self.menuExpanded = false
             hideShowBtnsAndView(show: false)
