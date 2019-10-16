@@ -98,11 +98,12 @@ class HomeVC: UIViewController {
         btnSettings.imageView?.contentMode = .scaleAspectFit
         btnMenu.imageView?.contentMode = .scaleAspectFit
         startAnimation()
-        intializeSideMenuNibView()
+        intiSideMenu()
     }
     
-    func intializeSideMenuNibView(){
-        self.menuView = (Bundle.main.loadNibNamed("SideMenuView", owner: self, options: nil)![0] as! SideMenuView)
+    func intiSideMenu(){
+        guard let menu = Bundle.main.loadNibNamed("SideMenuView", owner: self, options: nil)![0] as? SideMenuView else { return }
+        self.menuView = menu
     }
     
     //MARK: Animation Handling
@@ -160,7 +161,7 @@ class HomeVC: UIViewController {
         constWidthImgLogo.minPriority()
         constHeightImgLogo.minPriority()
         
-        lblTitle.font = UIFont(name: "system", size: 25)
+        lblTitle.font = UIFont.systemFont(ofSize: 25)
         
         constCenterVerticalImgLogoToLblTitleTop.maxPriority()
         constLeadingImgLogoToLblTitleTop.maxPriority()
@@ -232,9 +233,15 @@ class HomeVC: UIViewController {
     }
     
     @IBAction func btnSearch_Click(_ sender: UIButton) {
-        location.startLocationTracking(initializing: false)
-        vwOptions.btnLike.tintColor = UIColor(hexString: "#797779") 
+        getResturant()
+        //location.startLocationTracking(initializing: false)
+        vwOptions.btnLike.tintColor = UIColor(hexString: "#797779")
         animateLoader()
+        if view.backgroundColor == UIColor.white {
+            lblTitle.animate(font: UIFont.systemFont(ofSize: 33), duration: 0.4)
+            lblTitle.animate(font: UIFont.systemFont(ofSize: 25), duration: 0.4)
+        }
+        
     }
     
     func getResturant() {
@@ -331,3 +338,4 @@ extension HomeVC {
         self.mapView.setRegion(region, animated: true)
     }
 }
+

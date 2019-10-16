@@ -10,6 +10,7 @@
 		061F3ED82354E57900EF6115 /* OptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061F3ED72354E57900EF6115 /* OptionsView.swift */; };
 		061F3EDA23550A6000EF6115 /* ApplicationExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061F3ED923550A6000EF6115 /* ApplicationExt.swift */; };
 		061F3EDC235512EA00EF6115 /* ImagePreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061F3EDB235512EA00EF6115 /* ImagePreviewVC.swift */; };
+		0645FFD8235774BC006B4480 /* LabelExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0645FFD7235774BC006B4480 /* LabelExt.swift */; };
 		064790BF23535BE0005078B4 /* ConstraintExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064790BE23535BE0005078B4 /* ConstraintExt.swift */; };
 		064790C223535EFC005078B4 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064790C023535EFC005078B4 /* SideMenuView.swift */; };
 		064790C323535EFC005078B4 /* SideMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 064790C123535EFC005078B4 /* SideMenuView.xib */; };
@@ -36,6 +37,7 @@
 		061F3ED72354E57900EF6115 /* OptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsView.swift; sourceTree = "<group>"; };
 		061F3ED923550A6000EF6115 /* ApplicationExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationExt.swift; sourceTree = "<group>"; };
 		061F3EDB235512EA00EF6115 /* ImagePreviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePreviewVC.swift; sourceTree = "<group>"; };
+		0645FFD7235774BC006B4480 /* LabelExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelExt.swift; sourceTree = "<group>"; };
 		064790BE23535BE0005078B4 /* ConstraintExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintExt.swift; sourceTree = "<group>"; };
 		064790C023535EFC005078B4 /* SideMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		064790C123535EFC005078B4 /* SideMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SideMenuView.xib; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				067591B423526B7700DA38FB /* AlertMessage.swift */,
 				064790BE23535BE0005078B4 /* ConstraintExt.swift */,
 				061F3ED923550A6000EF6115 /* ApplicationExt.swift */,
+				0645FFD7235774BC006B4480 /* LabelExt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				06EE0F9D2350A762003FE355 /* SceneDelegate.swift in Sources */,
 				064790BF23535BE0005078B4 /* ConstraintExt.swift in Sources */,
 				061F3ED82354E57900EF6115 /* OptionsView.swift in Sources */,
+				0645FFD8235774BC006B4480 /* LabelExt.swift in Sources */,
 				067591AD23524F2C00DA38FB /* APIResponse.swift in Sources */,
 				067591B523526B7700DA38FB /* AlertMessage.swift in Sources */,
 			);
