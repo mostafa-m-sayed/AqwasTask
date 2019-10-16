@@ -9,7 +9,6 @@
 import UIKit
 import NVActivityIndicatorView
 import MapKit
-import NotificationBannerSwift
 class HomeVC: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
@@ -243,6 +242,7 @@ class HomeVC: UIViewController {
         ResturantVM.get(lat: lat, long: long) { resturant, error in
             self.vwLoader.stopAnimating()
             if error != nil {
+                self.animateAfterSearch()
                 self.alert(message: error!, title: "Failed", buttonMessage: "OK")
                 return
             }

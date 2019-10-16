@@ -45,7 +45,8 @@ struct ResturantVM {
         let config = NetworkManager.Configuration(parameters: ["uid": "\(lat),\(long)"], url: .resturants, method: .get)
         NetworkManager.makeRequest(configuration: config) {
             (response: APIResponse<Resturant>) in
-            guard let rawResponse = NetworkManager.rawResponse else { return }
+            guard let rawResponse = NetworkManager.rawResponse else { completion(nil, response.message)
+            return }
             guard let resturant: Resturant = rawResponse.getObject() else {
                 completion(nil, response.message)
                 return
